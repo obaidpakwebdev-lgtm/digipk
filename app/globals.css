@@ -1556,14 +1556,30 @@ footer {
     transition: 0.3s ease;
     z-index: 999;
 }
-.nav-overlay.active { opacity: 1; visibility: visible; }
-body.menu-open { overflow: hidden; }
+
+.nav-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+body.menu-open {
+    overflow: hidden;
+}
 
 /* Mobile menu z-index fix so it appears above overlay */
 @media (max-width: 768px) {
-    .nav-links { z-index: 1000; }
-    .nav-links.active { display: flex; }
-    .hamburger { z-index: 1001; position: relative; }
+    .nav-links {
+        z-index: 1000;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .hamburger {
+        z-index: 1001;
+        position: relative;
+    }
 }
 
 /* Sticky navbar shadow */
@@ -1660,7 +1676,7 @@ body.menu-open { overflow: hidden; }
     justify-content: center;
     font-size: 100px;
     color: var(--primary);
-    box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
     position: relative;
     overflow: hidden;
 }
@@ -1711,17 +1727,19 @@ body.menu-open { overflow: hidden; }
 
 /* Responsive */
 @media (max-width: 900px) {
+
     .service-detail-row,
     .service-detail-row.reverse {
         grid-template-columns: 1fr;
         gap: 40px;
         direction: ltr;
     }
-    
+
     .service-detail-img {
         height: 250px;
         font-size: 70px;
-        order: -1; /* Image pehle aayegi mobile par */
+        order: -1;
+        /* Image pehle aayegi mobile par */
     }
 }
 
@@ -1758,7 +1776,7 @@ body.menu-open { overflow: hidden; }
 .gallery-item:hover {
     border-color: var(--primary);
     transform: translateY(-5px);
-    box-shadow: 0 20px 50px rgba(16,185,129,0.1);
+    box-shadow: 0 20px 50px rgba(16, 185, 129, 0.1);
 }
 
 .gallery-img {
@@ -1828,7 +1846,7 @@ body.menu-open { overflow: hidden; }
     border: 1px solid var(--border);
     border-radius: 30px;
     padding: 50px;
-    box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
 }
 
 @media (max-width: 900px) {
@@ -1881,12 +1899,12 @@ body.menu-open { overflow: hidden; }
 .price-card:hover {
     border-color: var(--primary);
     transform: translateY(-8px);
-    box-shadow: 0 20px 50px rgba(16,185,129,0.15);
+    box-shadow: 0 20px 50px rgba(16, 185, 129, 0.15);
 }
 
 .price-card.popular {
     border-color: var(--primary);
-    background: linear-gradient(180deg, var(--surface) 0%, rgba(16,185,129,0.05) 100%);
+    background: linear-gradient(180deg, var(--surface) 0%, rgba(16, 185, 129, 0.05) 100%);
 }
 
 .price-card h3 {
@@ -1924,7 +1942,8 @@ body.menu-open { overflow: hidden; }
     list-style: none;
     padding: 0;
     margin-bottom: 30px;
-    flex-grow: 1; /* Pushes button to bottom */
+    flex-grow: 1;
+    /* Pushes button to bottom */
 }
 
 .price-features li {
@@ -1969,7 +1988,7 @@ body.menu-open { overflow: hidden; }
     border: 1px solid var(--border);
     border-radius: 24px;
     padding: 50px;
-    box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
 }
 
 .legal-container h1 {
@@ -2030,7 +2049,155 @@ body.menu-open { overflow: hidden; }
     .legal-container {
         padding: 30px 20px;
     }
+
     .legal-container h1 {
         font-size: 32px;
+    }
+}
+
+/* Thank You Page Specific CSS */
+.thank-you-page {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 120px 20px 80px;
+    position: relative;
+    z-index: 1;
+}
+
+.thank-you-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 30px;
+    padding: 60px 40px;
+    max-width: 700px;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Glow Effect inside Card */
+.thank-you-card::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(16, 185, 129, 0.08), transparent 60%);
+    z-index: 0;
+    pointer-events: none;
+}
+
+.thank-you-card>* {
+    position: relative;
+    z-index: 1;
+}
+
+/* Animated Checkmark */
+.success-checkmark {
+    width: 90px;
+    height: 90px;
+    background: rgba(16, 185, 129, 0.1);
+    border: 2px solid var(--primary);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 30px;
+    font-size: 40px;
+    color: var(--primary);
+    animation: pulse-check 2s infinite;
+}
+
+@keyframes pulse-check {
+    0% {
+        box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.4);
+    }
+
+    70% {
+        box-shadow: 0 0 0 20px rgba(16, 185, 129, 0);
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 rgba(16, 185, 129, 0);
+    }
+}
+
+.thank-you-card h1 {
+    font-size: 38px;
+    font-weight: 800;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.thank-you-card p {
+    color: var(--text-muted);
+    font-size: 17px;
+    line-height: 1.7;
+    margin-bottom: 40px;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.thank-you-actions {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+}
+
+.thank-you-actions .btn-solid {
+    padding: 15px 30px;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.btn-whatsapp {
+    padding: 15px 30px;
+    background: #25D366;
+    color: #000;
+    border-radius: 10px;
+    font-weight: 700;
+    font-size: 15px;
+    transition: 0.3s;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.btn-whatsapp:hover {
+    background: #1ebe57;
+    transform: translateY(-2px);
+}
+
+.contact-info-text {
+    font-size: 14px;
+    color: var(--text-muted);
+    padding-top: 25px;
+    border-top: 1px solid var(--border);
+}
+
+.contact-info-text strong {
+    color: var(--text-main);
+}
+
+@media (max-width: 768px) {
+    .thank-you-card {
+        padding: 40px 20px;
+    }
+
+    .thank-you-card h1 {
+        font-size: 28px;
+    }
+
+    .thank-you-actions {
+        flex-direction: column;
     }
 }
