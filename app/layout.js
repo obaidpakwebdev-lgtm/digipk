@@ -137,6 +137,7 @@ export default function RootLayout({ children }) {
               <li><Link href="/work">Portfolio</Link></li>
               <li><Link href="/pricing">Pricing</Link></li>
               <li><Link href="/contact">Contact</Link></li>
+              <li><Link href="/blogs">Blogs</Link></li>
             </ul>
             <Link href="/apply" className="btn-nav">Start a Project <i className="fas fa-arrow-right"></i></Link>
             <div className="hamburger"><i className="fas fa-bars"></i></div>
@@ -161,6 +162,7 @@ export default function RootLayout({ children }) {
               <Link href="/work">Work</Link>
               <Link href="/pricing">Pricing</Link>
               <Link href="/contact">Contact</Link>
+              <li><Link href="/blogs">Blogs</Link></li>
             </div>
             <div className="footer-social">
               <a href="#"><i className="fab fa-github"></i></a>
