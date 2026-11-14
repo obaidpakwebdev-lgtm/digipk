@@ -1,0 +1,180 @@
+.apply-hero {
+    padding: 160px 20px 40px;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.apply-hero h1 {
+    font-size: 48px;
+    font-weight: 800;
+    margin-bottom: 15px;
+    letter-spacing: -1.5px;
+    line-height: 1.1;
+}
+
+.apply-hero p {
+    color: var(--text-muted);
+    font-size: 18px;
+}
+
+.apply-container {
+    max-width: 900px;
+    margin: 0 auto 100px;
+    padding: 0 20px;
+}
+
+.apply-form-box {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 30px;
+    padding: 50px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+    position: relative;
+    overflow: hidden;
+}
+
+.apply-form-box::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(16, 185, 129, 0.05), transparent 60%);
+    z-index: 0;
+    pointer-events: none;
+}
+
+.apply-form-box form {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.form-section-title {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--text-main);
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 15px;
+}
+
+.form-section-title i {
+    color: var(--primary);
+}
+
+/* Input styling matching main site */
+.apply-form-box input,
+.apply-form-box select,
+.apply-form-box textarea {
+    width: 100%;
+    background: var(--bg);
+    border: 1px solid var(--border);
+    padding: 16px 20px;
+    border-radius: 12px;
+    color: var(--text-main);
+    font-size: 16px;
+    font-family: 'Outfit', sans-serif;
+    outline: none;
+    transition: 0.3s;
+}
+
+.apply-form-box input:focus,
+.apply-form-box select:focus,
+.apply-form-box textarea:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.1);
+}
+
+/* Custom Budget Options */
+.budget-options {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.budget-label {
+    cursor: pointer;
+}
+
+.budget-label input[type="radio"] {
+    display: none;
+}
+
+.budget-card {
+    background: var(--surface-light);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+    transition: 0.3s;
+    height: 100%;
+}
+
+.budget-card h4 {
+    font-size: 18px;
+    margin-bottom: 5px;
+    color: var(--text-main);
+}
+
+.budget-card p {
+    font-size: 13px;
+    color: var(--text-muted);
+}
+
+.budget-label input[type="radio"]:checked+.budget-card {
+    border-color: var(--primary);
+    background: rgba(16, 185, 129, 0.1);
+}
+
+/* Trust Badges */
+.trust-badges {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.trust-badges span {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--text-muted);
+    font-size: 14px;
+}
+
+.trust-badges i {
+    color: var(--primary);
+}
+
+@media (max-width: 768px) {
+    .apply-hero h1 {
+        font-size: 34px;
+    }
+
+    .apply-hero p {
+        font-size: 16px;
+    }
+
+    .apply-form-box {
+        padding: 30px 20px;
+    }
+
+    .budget-options {
+        grid-template-columns: 1fr;
+    }
+
+    .trust-badges {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+}
