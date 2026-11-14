@@ -1,3 +1,5 @@
+import Link from 'next/link'
+
 export const metadata = {
   title: 'Premium Web Development & Digital Services | DigoPK Karachi',
   description: 'Looking for the best web developer in Karachi? DigoPK offers custom web development, WordPress, SEO, graphic design, and video editing services to scale your business globally.',
@@ -21,7 +23,7 @@ export default function Services() {
                     We don't just build websites; we engineer digital experiences. From high-performance web apps to complete brand identities, DigoPK is your one-stop digital agency in Pakistan.
                 </p>
                 <div className="hero-actions" style={{ justifyContent: 'center' }}>
-                    <a href="/apply" className="btn-solid">Start Your Project</a>
+                    <Link href="/apply" className="btn-solid">Start Your Project</Link>
                     <a href="#pricing" className="btn-ghost">View Pricing <i className="fas fa-arrow-down"></i></a>
                 </div>
             </section>
@@ -42,7 +44,7 @@ export default function Services() {
                                 <li><i className="fas fa-check-circle"></i> Corporate Business Websites</li>
                                 <li><i className="fas fa-check-circle"></i> API Integrations & CRM Systems</li>
                             </ul>
-                            <a href="/apply" className="btn-solid" style={{ marginTop: '20px' }}>Start Web Project</a>
+                            <Link href="/apply" className="btn-solid" style={{ marginTop: '20px' }}>Start Web Project</Link>
                         </div>
                     </div>
 
@@ -148,7 +150,7 @@ export default function Services() {
                 <div className="cta-box">
                     <h2>Ready to discuss your project?</h2>
                     <p>Let's build something amazing together. Get a free consultation today.</p>
-                    <a href="/apply" className="btn-solid large-btn">Apply Now</a>
+                    <Link href="/apply" className="btn-solid large-btn">Apply Now</Link>
                 </div>
             </section>
 

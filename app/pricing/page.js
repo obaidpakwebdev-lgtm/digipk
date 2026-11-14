@@ -1,3 +1,5 @@
+import Link from 'next/link'
+
 export const metadata = {
   title: 'Transparent Pricing | Web Development & SEO Packages | DigoPK',
   description: 'View affordable pricing packages for web development, e-commerce, and digital marketing services by DigoPK, Karachi. No hidden charges.',
@@ -42,7 +44,7 @@ export default function Pricing() {
                             <li><i className="fas fa-check"></i> Basic On-Page SEO</li>
                             <li><i className="fas fa-check"></i> 1 Month Free Support</li>
                         </ul>
-                        <a href="/apply" className="btn-ghost full-width">Get Started</a>
+                        <Link href="/apply" className="btn-ghost full-width">Get Started</Link>
                     </div>
 
                     {/* Business (Popular) */}
@@ -59,7 +61,7 @@ export default function Pricing() {
                             <li><i className="fas fa-check"></i> Speed Optimization</li>
                             <li><i className="fas fa-check"></i> 3 Months Free Support</li>
                         </ul>
-                        <a href="/apply" className="btn-solid full-width">Start Project</a>
+                        <Link href="/apply" className="btn-solid full-width">Start Project</Link>
                     </div>
 
                     {/* Enterprise */}
@@ -74,7 +76,7 @@ export default function Pricing() {
                             <li><i className="fas fa-check"></i> Dedicated Project Manager</li>
                             <li><i className="fas fa-check"></i> Priority 24/7 Support</li>
                         </ul>
-                        <a href="/apply" className="btn-ghost full-width">Book a Call</a>
+                        <Link href="/apply" className="btn-ghost full-width">Book a Call</Link>
                     </div>
                 </div>
             </section>
@@ -98,7 +100,7 @@ export default function Pricing() {
                             <li><i className="fas fa-check"></i> Basic Backlink Building</li>
                             <li><i className="fas fa-check"></i> Monthly Performance Report</li>
                         </ul>
-                        <a href="/apply" className="btn-ghost full-width">Start SEO</a>
+                        <Link href="/apply" className="btn-ghost full-width">Start SEO</Link>
                     </div>
 
                     {/* Standard SEO (Popular) */}
@@ -114,7 +116,7 @@ export default function Pricing() {
                             <li><i className="fas fa-check"></i> Competitor Analysis</li>
                             <li><i className="fas fa-check"></i> Bi-Weekly Reports</li>
                         </ul>
-                        <a href="/apply" className="btn-solid full-width">Boost Traffic</a>
+                        <Link href="/apply" className="btn-solid full-width">Boost Traffic</Link>
                     </div>
 
                     {/* Social Media */}
@@ -128,7 +130,7 @@ export default function Pricing() {
                             <li><i className="fas fa-check"></i> Caption Writing & Hashtags</li>
                             <li><i className="fas fa-check"></i> Page Optimization</li>
                         </ul>
-                        <a href="/apply" className="btn-ghost full-width">Get Started</a>
+                        <Link href="/apply" className="btn-ghost full-width">Get Started</Link>
                     </div>
                 </div>
             </section>

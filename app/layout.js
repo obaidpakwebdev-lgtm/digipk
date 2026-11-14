@@ -1,5 +1,6 @@
 import './globals.css'
 import { Outfit } from 'next/font/google'
+import Link from 'next/link'
 
 const outfit = Outfit({
   subsets: ['latin'],
@@ -126,17 +127,17 @@ export default function RootLayout({ children }) {
         {/* Navbar */}
         <nav className="navbar">
           <div className="nav-inner">
-            <a href="/" className="logo">
+            <Link href="/" className="logo">
               <img src="/images/logo.png" height="30" alt="DigoPk logo" />
-            </a>
+            </Link>
             <ul className="nav-links">
-              <li><a href="/">Home</a></li>
-              <li><a href="/services">Services</a></li>
-              <li><a href="/work">Portfolio</a></li>
-              <li><a href="/pricing">Pricing</a></li>
-              <li><a href="/contact">Contact</a></li>
+              <li><Link href="/">Home</Link></li>
+              <li><Link href="/services">Services</Link></li>
+              <li><Link href="/work">Portfolio</Link></li>
+              <li><Link href="/pricing">Pricing</Link></li>
+              <li><Link href="/contact">Contact</Link></li>
             </ul>
-            <a href="/apply" className="btn-nav">Start a Project <i className="fas fa-arrow-right"></i></a>
+            <Link href="/apply" className="btn-nav">Start a Project <i className="fas fa-arrow-right"></i></Link>
             <div className="hamburger"><i className="fas fa-bars"></i></div>
           </div>
         </nav>
@@ -154,11 +155,11 @@ export default function RootLayout({ children }) {
               <p>Pakistan's leading digital agency. We build websites and brands that grow your business.</p>
             </div>
             <div className="footer-links">
-              <a href="/">Home</a>
-              <a href="/services">Services</a>
-              <a href="/work">Work</a>
-              <a href="/pricing">Pricing</a>
-              <a href="/contact">Contact</a>
+              <Link href="/">Home</Link>
+              <Link href="/services">Services</Link>
+              <Link href="/work">Work</Link>
+              <Link href="/pricing">Pricing</Link>
+              <Link href="/contact">Contact</Link>
             </div>
             <div className="footer-social">
               <a href="#"><i className="fab fa-github"></i></a>
@@ -170,9 +171,9 @@ export default function RootLayout({ children }) {
           {/* Naya Footer Bottom with Links */}
           <div className="footer-bottom" style={{ display: 'flex', flexDirection: 'column', gap: '15px', alignItems: 'center', marginTop: '20px' }}>
             <div className="legal-links" style={{ display: 'flex', gap: '20px', flexWrap: 'wrap', justifyContent: 'center' }}>
-              <a href="/terms" style={{ color: 'var(--text-muted)', fontSize: '14px', transition: '0.3s' }}>Terms & Conditions</a>
-              <a href="/privacy" style={{ color: 'var(--text-muted)', fontSize: '14px', transition: '0.3s' }}>Privacy Policy</a>
-              <a href="/refund" style={{ color: 'var(--text-muted)', fontSize: '14px', transition: '0.3s' }}>Refund Policy</a>
+              <Link href="/terms" style={{ color: 'var(--text-muted)', fontSize: '14px', transition: '0.3s' }}>Terms & Conditions</Link>
+              <Link href="/privacy" style={{ color: 'var(--text-muted)', fontSize: '14px', transition: '0.3s' }}>Privacy Policy</Link>
+              <Link href="/refund" style={{ color: 'var(--text-muted)', fontSize: '14px', transition: '0.3s' }}>Refund Policy</Link>
             </div>
             <p>© 2026 DigoPK. All rights reserved. Made with <span style={{ color: 'var(--primary)' }}>❤</span> in Pakistan 🇵🇰 | Web Developer Karachi | Digital Marketing Pakistan</p>
           </div>
