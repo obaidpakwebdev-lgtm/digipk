@@ -118,6 +118,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <head>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+        <link rel="image/ico" href="favicon.ico" />
       </head>
       <body className={outfit.className}>
 
@@ -182,6 +183,7 @@ export default function RootLayout({ children }) {
         <a href="https://wa.me/923107454676" className="whatsapp-float" target="_blank" rel="noreferrer">
           <i className="fab fa-whatsapp"></i>
         </a>
+        <script src='script.js'></script>
 
       </body>
     </html>
